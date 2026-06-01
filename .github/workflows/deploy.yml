@@ -36,7 +36,7 @@ jobs:
           service: ${{ env.SERVICE }}
           region: ${{ env.REGION }}
           image: ${{ env.IMAGE }}:${{ github.sha }}
-          flags: --ingress=internal-and-cloud-load-balancing --allow-unauthenticated
+          flags: --ingress=internal-and-cloud-load-balancing --allow-unauthenticated --port=8082
           env_vars: |
             DB_URL=${{ secrets.DB_URL }}
             DB_USER=${{ secrets.DB_USER }}
